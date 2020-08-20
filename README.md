@@ -1,7 +1,7 @@
 <h1>RPA API</h1> </br>
 
 
-<p> O projeto consiste em um API Java construida com SpringBoot e organizada em três camdas.  Controllers, reposáveis por receber as requisições HTTP. Os Services responsáveis por implementar as regras de negócio e receber dados dos controllers e repositories. Por fim os Repositorio reponsaveis se comunicar com o BD e trrafegar dados entre aplicação e BD.
+<p> O projeto consiste em um API Java construida com SpringBoot e organizada em camdas.  Controllers, reposáveis por receber as requisições HTTP. Os Services responsáveis por implementar as regras de negócio e receber dados dos controllers e repositories. Por fim os Repositorio reponsaveis se comunicar com o BD e trrafegar dados entre aplicação e BD.
  </p>
 
 <h2>Build</h2>
