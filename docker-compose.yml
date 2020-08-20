@@ -1,0 +1,36 @@
+version: "3"
+
+volumes:
+  my-db:
+services:
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - my-db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "mydb"
+    networks:
+      - rpa-network
+  api:
+    image: rpa-api
+    restart: always
+    depends_on:   
+     - mysql
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "9080:9080"
+    environment: 
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mydb?createDatabaseIfNotExist=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - rpa-network
+    
+networks:
+  rpa-network:
+    driver: bridge
