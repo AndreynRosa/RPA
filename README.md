@@ -31,11 +31,11 @@ Em um segundo momento será rodadas as mrigrations do BD.</p>
   <li> JPA - ORM </li>
   <li> Mokito - ferramneta para criar mocks e auxiliar na criação de testes </li>
   <li> Junit 5 - ferramenta de teste </li>
-<ul>
+</ul>
 
 <p> PS: as ferramentas de teste já vêm integradas junto ao Spring Boot </p>
 
-
+</br>
 <h2>Sugestões e melhorias </h2>
 <p> Algumas melhorias possiveis seriam:</p> 
 <p> 1 - retirar o ORM para garantir maior performance.  <p/>
