@@ -39,7 +39,7 @@ Em um segundo momento será rodadas as mrigrations do BD.</p>
 <h2>Sugestões e melhorias </h2>
 <p> Algumas melhorias possiveis seriam:</p> 
 <p> 1 - retirar o ORM para garantir maior performance.  <p/>
-<p> 2 -  garantir testes para os controllers que não foram cobertos </p>
+<p> 2 -  criar testes para os controllers que não foram cobertos </p>
 <p> 3 -  documentar o código com swagger ou alguma ferramenta do genero </P>
 
 
