@@ -38,11 +38,18 @@ public class NotaFiscalService {
         }
     }
 
-    public List<NotaFiscalEntity> getAllByPretadorId(Integer empresaPrestadoraId) {
+    public List<NotaFiscalEntity> getAllByPrestadoraId(Integer empresaPrestadoraId) {
         EmpresaEntity empresaEntity = empresaSarvice.findById(empresaPrestadoraId);
         empresaSarvice.checkIfEmpresaIsValid(empresaEntity);
 
         return repository.findByEmpresaPrestadora(empresaEntity);
+    }
+    public List<NotaFiscalEntity> getAllByTomadoraId(Integer tomadoraId){
+        EmpresaEntity empresaEntity = empresaSarvice.findById(tomadoraId);
+        empresaSarvice.checkIfEmpresaIsValid(empresaEntity);
+
+        return repository.findByEmpresaTomadora(empresaEntity);
+
     }
 
     private void assertSaveNotaFiscal(NotaFiscalEntity notaFiscal) {

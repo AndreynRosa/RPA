@@ -3,12 +3,10 @@ package com.api.rpa.Repository;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.List;
 
 import com.api.rpa.Utils.EntityUtils;
 import com.api.rpa.model.Entity.EmpresaEntity;
 import com.api.rpa.model.Entity.NotaFiscalEntity;
-import com.api.rpa.repository.EmpresaRepository;
 import com.api.rpa.repository.NotaFiscalRepository;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -24,9 +22,6 @@ public class NotaFiscalRepositoryTest {
 
     @Autowired
     private NotaFiscalRepository repository;
-
-    @Autowired
-    private EmpresaRepository empresaRepository;
 
     private EntityUtils utils;
 

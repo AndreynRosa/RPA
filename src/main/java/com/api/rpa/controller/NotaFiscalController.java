@@ -22,7 +22,7 @@ public class NotaFiscalController {
     private NotaFiscalService service;
 
     @PostMapping(value = "/{tomadorId}/{prestadorId}")
-    public ResponseEntity<NotaFiscalEntity> postMethodName(@PathVariable("tomadorId") Integer tomadorId,
+    public ResponseEntity<NotaFiscalEntity> save(@PathVariable("tomadorId") Integer tomadorId,
             @PathVariable("prestadorId") Integer prestadorId, @RequestBody NotaFiscalEntity nota) {
         return ResponseEntity.ok(service.save(tomadorId, prestadorId, nota));
     }
@@ -30,6 +30,12 @@ public class NotaFiscalController {
     @GetMapping(value = "/prestadora/{prestadorId}")
     public ResponseEntity<List<NotaFiscalEntity>> findAllByPrestadora(
             @PathVariable("prestadorId") Integer prestadorId) {
-        return ResponseEntity.ok(service.getAllByPretadorId(prestadorId));
+        return ResponseEntity.ok(service.getAllByPrestadoraId(prestadorId));
+    }
+
+    @GetMapping(value = "/tomadora/{tomadorId}")
+    public ResponseEntity<List<NotaFiscalEntity>> findAllByTomadora(
+            @PathVariable("tomadorId") Integer tomadorId) {
+        return ResponseEntity.ok(service.getAllByTomadoraId(tomadorId));
     }
 }

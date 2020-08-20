@@ -11,4 +11,6 @@ public interface NotaFiscalRepository extends JpaRepository<NotaFiscalEntity, In
 
     List<NotaFiscalEntity> findByEmpresaPrestadora(EmpresaEntity empresaTomadora);
 
+	List<NotaFiscalEntity> findByEmpresaTomadora(EmpresaEntity empresaEntity);
+
 }

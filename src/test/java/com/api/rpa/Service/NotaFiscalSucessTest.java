@@ -102,7 +102,7 @@ public class NotaFiscalSucessTest {
         final NotaFiscalEntity nota = entityUtils.newNotaFiscalT(tomadora, prestadora);
         Mockito.when(mockService.save(tomadora.getId(), prestadora.getId(), nota)).thenReturn(notaMock);
         final NotaFiscalEntity nf = mockService.save(tomadora.getId(), prestadora.getId(), nota);
-        assertTrue(!nf.getEmpresaPrestadora().equals(nf.getEmpresaTomadora().getId()));
+        assertTrue(!nf.getEmpresaPrestadora().equals(nf.getEmpresaTomadora()));
     }
 
 }
