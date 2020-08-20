@@ -16,7 +16,7 @@ docker-compose up --build -d
 
 <h2>Tecnologias</h2>
 <ul> 
-  <li> Java 1.8 - ou também versão 8. </li>
+  <li> Java 1.8 </li>
   <li> Spring Boot - framework difundido na comunidade java. </li> 
   <li> Flyway - ferramenta de versionamento do Banco de dados.</li>
   <li> Lombok - produtividade e diminuir verbosidade do codigo. </li>
